@@ -7,8 +7,8 @@ def GCD(a, b):
         a, b = b, a % b
     return a
 
-n1=int(input("Enter a number:"))
-n2=int(input("Enter another number:"))
+n1=int(input("Enter firt number:"))
+n2=int(input("Enter second number:"))
 
 start=default_timer()
 result=GCD(n1,n2)

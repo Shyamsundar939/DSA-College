@@ -9,5 +9,5 @@ def TOH(n,src,dst,temp):
         TOH(n-1,temp,dst,src)
 
 n=int(input("Enter a number:"))
-print(f"Total numbers of move for moves for {n} disc is {(2**n)-1}")
+print(f"Total numbers of moves for {n} disc is {(2**n)-1}")
 TOH(n,'A','B','C')

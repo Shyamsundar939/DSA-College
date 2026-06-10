@@ -38,9 +38,9 @@ int isEmpty(struct stack s)
 void push(struct stack *s, int element)
 {
     if (s->top == MAX - 1)
-        printf("stack overfloe/n");
+        printf("stack overflow/n");
 
-    if (s->top == -1)
+    else
     {
         s->top++;
         s->data[s->top] = element;
@@ -57,7 +57,8 @@ int pop(struct stack *s)
     }
     else
     {
-        element=  s->data[(s->top)--];
+        element=  s->data[(s->top)];
+        s->top--;
         printf("Element %d is popped from stack \n", element);
         return element;
 
@@ -77,7 +78,7 @@ int main()
 
         printf("chooose the operation you want to perform \n");
         printf(" \n 1.Push\n 2.pop \n 3.Exist \n ");
-        printf("Enter your choice?-> ");
+        printf("Enter your choice?-> \n");
         scanf("%d", &choice);
 
         switch (choice)
