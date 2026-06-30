@@ -38,7 +38,7 @@ int isEmpty(struct stack s)
 void push(struct stack *s, int element)
 {
     if (s->top == MAX - 1)
-        printf("stack overflow/n");
+        printf("stack overflow\n");
 
     else
     {
@@ -85,7 +85,6 @@ int main()
         {
         case 1:
         {
-            int element;
             printf("Enter the element you want to push \n ");
             scanf("%d", &element);
 
@@ -111,7 +110,8 @@ int main()
         }
         }
 
-    } while (choice != 3);
+    } 
+    while (choice != 3);
 
     return 0;
 }
