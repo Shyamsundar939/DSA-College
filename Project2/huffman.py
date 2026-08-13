@@ -83,26 +83,6 @@ def save_compressed(compressed, codes, output_file):
         file.write(compressed)
 
 
-def decompress_text(compressed, root):
-
-    text = ""
-    current = root
-
-    for bit in compressed:
-
-        if bit == "0":
-            current = current.left
-
-        else:
-            current = current.right
-
-        if current.char is not None:
-
-            text += current.char
-            current = root
-
-    return text
-
 
 def main():
 
@@ -184,11 +164,6 @@ def main():
 
     print("\nCompressed file saved as:")
     print(output_file)
-
-    decompressed = decompress_text(compressed, root)
-
-    print("\nDecompressed text:")
-    print(decompressed)
 
 
 if __name__ == "__main__":

@@ -1,1 +1,1 @@
-compress a file using huffman coding
+compress huffman coding
